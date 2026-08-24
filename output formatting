@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("================================");
+
+        for (int i = 0; i < 3; i++) {
+
+            String name = sc.next();
+            int n = sc.nextInt();
+
+            System.out.print(name);
+
+            // Add spaces until 15 characters
+            for (int j = name.length(); j < 15; j++) {
+                System.out.print(" ");
+            }
+
+            // Add zeros before the number
+            if (n < 10) {
+                System.out.print("00");
+            } 
+            else if (n < 100) {
+                System.out.print("0");
+            }
+
+            System.out.println(n);
+        }
+
+        System.out.println("================================");
+
+        sc.close();
+    }
+}
+
+
+
+
